@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="fixed bg-gray-300 w-full ">
+    <div class="mx-auto max-w-7xl px-2 ">
+      <div class="relative flex h-16 items-center justify-between">
+        <a><i class="fa fa-bars"></i></a>
+        <a href="#">HOME</a>
+        <a href="#band">BAND</a>
+        <a href="#tour">TOUR</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+  </div>
+  <!-- DESPLEGABLE IMPOSIBLE DE HACER SIN JS -->
+
+  <!-- Page content -->
+
+  <!-- QUITO EL SLIDER PORQUE NO HAY IMAGENES QUE MOSTARA -->
+
+  <!-- The Band Section -->
+  <div id="band" class="bg-white py-80">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-3xl font-semibold text-gray-900">THE BAND</h2>
+        <p class="italic text-gray-600">We love music</p>
+        <p class="text-gray-700 mt-4">
+          We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="justify-center grid grid-cols-3 grid-rows-1 gap-20 m-10">
+        <div>
+          <p class="flex justify-center m-4">Name</p>
+          <img class="rounded-2xl" src="https://picsum.photos/500/500?random=1" alt="Random Name">
+        </div>
+        <div>
+          <p class="flex justify-center m-4">Name</p>
+          <img class="rounded-2xl" src="https://picsum.photos/500/500?random=2" alt="Random Name">
+        </div>
+        <div>
+          <p class="flex justify-center m-4">Name</p>
+          <img class="rounded-2xl" src="https://picsum.photos/500/500?random=3" alt="Random Name">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+  <div id="tour" class="py-16 bg-gray-50">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-800">TOUR DATES</h2>
+      <p class="italic text-gray-600">Remember to book your tickets!</p>
+      <ul class="mt-4 text-gray-700">
+        <li>September <span class="text-red-500">Sold out</span></li>
+        <li>October <span class="text-red-500">Sold out</span></li>
+        <li>November <span class="text-green-500">3</span></li>
+      </ul>
+      <div class="mt-8 grid grid-cols-3 gap-8">
+        <div class="flex flex-wrap justify-center m-10">
+          <img class="rounded-2xl" src="https://picsum.photos/500/500?random=4" alt="New York">
+          <div class="mt-2">
+            <p class="font-semibold text-gray-800">New York</p>
+            <p class="text-gray-600">Fri 27 Nov 2016</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2"
+              onclick="document.getElementById('ticketHidden').classList.remove('hidden')">Buy Tickets</button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center m-10">
+          <img class="rounded-2xl" src="https://picsum.photos/500/500?random=5" alt="Paris">
+          <div class="mt-2">
+            <p class="font-semibold text-gray-800">Paris</p>
+            <p class="text-gray-600">Sat 28 Nov 2016</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2"
+              onclick="document.getElementById('ticketHidden').classList.remove('hidden')">Buy Tickets</button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center m-10">
+          <img class="rounded-2xl" src="https://picsum.photos/500/500?random=6" alt="San Francisco">
+          <div class="mt-2">
+            <p class="font-semibold text-gray-800">San Francisco</p>
+            <p class="text-gray-600">Sun 29 Nov 2016</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2"
+              onclick="document.getElementById('ticketHidden').classList.remove('hidden')">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Ticket Modal -->
+  <div id="ticketHidden" class="hidden">
+    <div id="ticketModal"
+      class="flex justify-center items-center fixed inset-0 bg-gray-500 bg-opacity-50 z-40 p-4 overflow-x-hidden overflow-y-auto">
+      <div class="relative items-center bg-white w-1/4 p-6 rounded-lg">
+        <header class="flex justify-between">
+          <span class="text-gray-600 cursor-pointer"
+            onclick="document.getElementById('ticketHidden').classList.add('hidden')">×</span>
+          <h2 class="text-lg text-gray-800">Tickets</h2>
+        </header>
+        <div>
+          <p>Tickets, $15 per person</p>
+          <input type="text" placeholder="How many?" class="border p-2 w-full">
+          <p>Send To</p>
+          <input type="text" placeholder="Enter email" class="border p-2 w-full">
+          <button class="bg-green-500 text-white w-full p-2 mt-4">PAY</button>
+          <button onclick="document.getElementById('ticketHidden').classList.add('hidden')"
+            class="bg-red-500 text-white w-full p-2 mt-2">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div id="contact" class="py-16 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold text-gray-800">CONTACT</h2>
+    <p class="italic text-gray-600">Fan? Drop a note!</p>
+    <div class="mt-8 grid grid-cols-2 gap-8">
+      <div class="text-gray-700">
+        <p>Chicago, US</p>
+        <p>Phone: +00 151515</p>
+        <p>Email: mail@mail.com</p>
+      </div>
+      <div>
+        <form action="/action_page.php" target="_blank">
+          <input type="text" placeholder="Name" required class="border p-2 w-full">
+          <input type="text" placeholder="Email" required class="border p-2 w-full mt-4">
+          <input type="text" placeholder="Message" required class="border p-2 w-full mt-4">
+          <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <div>
+      <i class="fa fa-facebook-official"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-snapchat"></i>
+      <i class="fa fa-pinterest-p"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
